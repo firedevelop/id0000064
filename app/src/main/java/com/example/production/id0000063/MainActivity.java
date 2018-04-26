@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             XmlPullParser parser = factory.newPullParser();
 
             InputStream is = getApplicationContext().getAssets().open("sample.xml");
-            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false); //Indicates whether or not the factory is configured to produce parsers which are namespace aware
             parser.setInput(is, null); //Sets the input stream the parser is going to process. This call resets the parser state and sets the event type to the initial value START_DOCUMENT.
 
             ArrayList<Country> countries = parseXML(parser);
